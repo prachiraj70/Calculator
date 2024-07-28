@@ -1,9 +1,13 @@
-body{
+body {
     background-image: url(background.svg);
     background-size: cover;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: left;
+
 }
 
-.calculator{
+.calculator {
 
     width: 440px;
     height: 710px;
@@ -13,12 +17,12 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
-#Display{
+#Display {
 
-    width:410px;
+    width: 410px;
     height: 75px;
     background-color: #C3EDFD;
     border-radius: 50px;
@@ -27,20 +31,20 @@ body{
     box-sizing: border-box;
 }
 
-.display-div{
+.display-div {
     padding-top: 35px;
     padding-left: 10px;
 
 }
 
-img{
+img {
     width: 95px;
     height: 23px;
     padding-top: 15px;
     padding-left: 15px;
 }
 
-button{
+button {
     width: 75px;
     height: 75px;
     border-radius: 50px;
@@ -49,7 +53,7 @@ button{
 
 }
 
-#calculator-button{
+#calculator-button {
     padding-top: 20px;
     padding-left: 20px;
     display: grid;
@@ -59,18 +63,64 @@ button{
 }
 
 
-.button-operator{
+.button-operator {
 
     background-color: #F9C569;
 }
-.button-clear{
-    background-color:#F9C569 ;
+
+.button-clear {
+    background-color: #F9C569;
     width: 186px;
-    
+
 }
-.button-equal{
+
+.button-equal {
     background-color: #F9C569;
     width: 186px;
     grid-area: 5/3;
 }
- 
+
+@media(width < 440px) {
+
+    .calculator {
+        width: 330px;
+        height: 532.5px;
+    }
+
+    #Display {
+        width: 307.5px;
+        height: 56.25px;
+        font-size: 27px;
+    }
+
+
+
+
+    button {
+        width: 56.25px;
+        height: 56.25px;
+        font-size: 27px;
+    }
+
+    #calculator-button {
+
+        padding-top: 15px;
+        padding-left: 15px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 56.25px 56.25px 56.25px 56.25px;
+    }
+
+    .button-clear {
+        
+        width: 139.5px;
+        
+    
+    }
+    
+    .button-equal {
+        
+        width: 139.5px;
+    }
+
+}
